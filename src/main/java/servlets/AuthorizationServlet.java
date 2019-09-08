@@ -25,6 +25,7 @@ public class AuthorizationServlet extends HttpServlet {
         if(login == null || password == null) {
             resp.setContentType("text/html;charset=utf-8");
             resp.setStatus(HttpServletResponse.SC_BAD_REQUEST);
+            resp.getWriter().println("Incorrect data");
             return;
         }
 
@@ -50,7 +51,6 @@ public class AuthorizationServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        resp.getWriter().println("in Authorisation");
     }
 
 }

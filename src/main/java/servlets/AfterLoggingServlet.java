@@ -26,24 +26,12 @@ public class AfterLoggingServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        String sessionId = req.getSession().getId();
 
+        String sessionId = req.getSession().getId();
         if(accountService.getUserBySession(sessionId) == null) {
             resp.setContentType("text/html;charset=utf-8");
             resp.setStatus(HttpServletResponse.SC_BAD_REQUEST);
-            return;
-        }
-        accountService.deleteSession(sessionId);
-        resp.getWriter().println("Goodbye");
-    }
-
-    @Override
-    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        String sessionId = req.getSession().getId();
-
-        if(accountService.getUserBySession(sessionId) == null) {
-            resp.setContentType("text/html;charset=utf-8");
-            resp.setStatus(HttpServletResponse.SC_BAD_REQUEST);
+            resp.getWriter().println("first authorisation");
             return;
         }
 
@@ -57,6 +45,20 @@ public class AfterLoggingServlet extends HttpServlet {
         reader.close();
 
         resp.getWriter().println(sb);
+
+    }
+
+    @Override
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        String sessionId = req.getSession().getId();
+
+        if(accountService.getUserBySession(sessionId) == null) {
+            resp.setContentType("text/html;charset=utf-8");
+            resp.setStatus(HttpServletResponse.SC_BAD_REQUEST);
+            return;
+        }
+        accountService.deleteSession(sessionId);
+        resp.getWriter().println("Goodbye");
     }
 
 }
