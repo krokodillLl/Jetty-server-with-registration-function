@@ -2,19 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4b26bee6-b2b1-4598-94d7-c503b736db4e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/pages_html/input.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages_html/out.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages_html/afterLogging.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages_html/afterLogging.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages_html/authorisation.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages_html/authorisation.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages_html/firstSheet.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages_html/firstSheet.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages_html/registration.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server.jar" beforeDir="false" afterPath="$PROJECT_DIR$/server.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/accounts/AccountService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accounts/AccountService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/servlets/AfterLoggingServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlets/AfterLoggingServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/servlets/AuthorizationServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlets/InputServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/servlets/RegistrationServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlets/AuthorisationServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages_html/input.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages_html/input.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages_html/out.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages_html/out.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -105,7 +97,8 @@
       <workItem from="1567893642570" duration="1803000" />
       <workItem from="1567932405471" duration="14534000" />
       <workItem from="1568043648757" duration="10465000" />
-      <workItem from="1568054779502" duration="300000" />
+      <workItem from="1568054779502" duration="579000" />
+      <workItem from="1568055445121" duration="88000" />
     </task>
     <servers />
   </component>
