@@ -23,6 +23,14 @@ public class AccountService {
         sessionIdToProfile.put(sessionId, userProfile);
     }
 
+    public boolean isNotEmptyLoginToProfile() {
+        return !loginToProfile.isEmpty();
+    }
+
+    public boolean isNotEmptySessionIdToProfile() {
+        return !sessionIdToProfile.isEmpty();
+    }
+
     public UserProfile getUserBySession(String sessionId) {
         return sessionIdToProfile.get(sessionId);
     }

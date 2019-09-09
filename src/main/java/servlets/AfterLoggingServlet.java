@@ -20,30 +20,25 @@ public class AfterLoggingServlet extends HttpServlet {
     }
 
     @Override
-    protected void doDelete(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-
-    }
-
-    @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
         String sessionId = req.getSession().getId();
-        if(accountService.getUserBySession(sessionId) == null) {
+        if(!accountService.isNotEmptySessionIdToProfile() || accountService.getUserBySession(sessionId) == null) {
             resp.setContentType("text/html;charset=utf-8");
             resp.setStatus(HttpServletResponse.SC_BAD_REQUEST);
-            resp.getWriter().println("first authorisation");
+            resp.getWriter().println("sign in to your account first");
+            resp.getWriter().println("<meta http-equiv=\"Refresh\" content=\"3; URL=http://localhost:8080/authorisation\">");
             return;
         }
 
         BufferedReader reader = new BufferedReader(new FileReader("pages_html" + File.separator + "afterLogging.html"));
         StringBuilder sb = new StringBuilder();
-        sb.append(reader.readLine() + "Hi, " + accountService.getUserBySession(sessionId).getLogin());
         while(reader.ready()) {
             sb.append(reader.readLine());
         }
+        sb.append("Hi, " + accountService.getUserBySession(sessionId).getLogin());
 
         reader.close();
-
         resp.getWriter().println(sb);
 
     }
@@ -58,7 +53,14 @@ public class AfterLoggingServlet extends HttpServlet {
             return;
         }
         accountService.deleteSession(sessionId);
-        resp.getWriter().println("Goodbye");
+        BufferedReader reader = new BufferedReader(new FileReader("pages_html" + File.separator + "out.html"));
+        StringBuilder sb = new StringBuilder();
+        while(reader.ready()) {
+            sb.append(reader.readLine());
+        }
+
+        reader.close();
+        resp.getWriter().println(sb);
     }
 
 }

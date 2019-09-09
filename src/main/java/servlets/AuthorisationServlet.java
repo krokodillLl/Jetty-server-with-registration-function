@@ -1,6 +1,8 @@
 package servlets;
 
 import accounts.AccountService;
+import accounts.UserProfile;
+import com.google.gson.Gson;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -11,46 +13,52 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 
-public class AuthorizationServlet extends HttpServlet {
+public class AuthorisationServlet extends HttpServlet {
     private final AccountService accountService;
 
-    public AuthorizationServlet(AccountService accountService) {
+    public AuthorisationServlet(AccountService accountService) {
         this.accountService = accountService;
     }
 
     @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    protected void doGet(HttpServletRequest req,
+                         HttpServletResponse resp) throws ServletException, IOException {
+
+        BufferedReader reader = new BufferedReader(new FileReader("pages_html" + File.separator + "authorisation.html"));
+        StringBuilder stb = new StringBuilder();
+        while(reader.ready()) {
+            stb.append(reader.readLine());
+        }
+        reader.close();
+
+        resp.getWriter().println(stb);
+
         String login = req.getParameter("login");
         String password = req.getParameter("password");
+        String email = req.getParameter("email");
+
         if(login == null || password == null) {
             resp.setContentType("text/html;charset=utf-8");
             resp.setStatus(HttpServletResponse.SC_BAD_REQUEST);
-            resp.getWriter().println("Incorrect data");
             return;
         }
 
-        if(!accountService.getUserByLogin(login).getPassword().equals(password)) {
+        if(accountService.getUserByLogin(login) != null) {
             resp.setContentType("text/html;charset=utf-8");
             resp.setStatus(HttpServletResponse.SC_BAD_REQUEST);
-            resp.getWriter().println("Incorrect username or password");
+            resp.getWriter().println("This login already exists");
+            resp.getWriter().println("<meta http-equiv=\"Refresh\" content=\"3; URL=http://localhost:8080/\">");
             return;
         }
 
-        accountService.addSession(req.getSession().getId(), accountService.getUserByLogin(login));
+        accountService.addNewUser(new UserProfile(login, password, email));
 
-        BufferedReader reader = new BufferedReader(new FileReader("pages_html" + File.separator + "authorisation.html"));
-        StringBuilder sb = new StringBuilder();
-        while(reader.ready()) {
-            sb.append(reader.readLine());
-        }
 
-        reader.close();
-
-        resp.getWriter().println(sb);
     }
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+
     }
 
 }

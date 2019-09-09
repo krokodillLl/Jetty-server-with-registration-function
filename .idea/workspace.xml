@@ -2,15 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4b26bee6-b2b1-4598-94d7-c503b736db4e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages_html/input.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages_html/out.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages_html/afterLogging.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages_html/afterLogging.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages_html/authorisation.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages_html/authorisation.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages_html/firstSheet.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages_html/firstSheet.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages_html/registration.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server.jar" beforeDir="false" afterPath="$PROJECT_DIR$/server.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/accounts/AccountService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accounts/AccountService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/servlets/AfterLoggingServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlets/AfterLoggingServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/servlets/AuthorizationServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlets/AuthorizationServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/servlets/AfterLoggingServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/servlets/AfterLoggingServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/servlets/AuthorizationServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/servlets/AuthorizationServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/servlets/AuthorizationServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlets/InputServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/servlets/RegistrationServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlets/AuthorisationServlet.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -21,8 +25,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="Class" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -37,14 +41,24 @@
     </option>
   </component>
   <component name="ProjectId" id="1QWkG3MNIIoqhZPtShST0IChIjG" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\programming\signInOutSite\src" />
+      <recent name="F:\programming\signInOutSite\pages_html" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -89,7 +103,9 @@
       <option name="presentableId" value="Default" />
       <updated>1567893640314</updated>
       <workItem from="1567893642570" duration="1803000" />
-      <workItem from="1567932405471" duration="14166000" />
+      <workItem from="1567932405471" duration="14534000" />
+      <workItem from="1568043648757" duration="10465000" />
+      <workItem from="1568054779502" duration="300000" />
     </task>
     <servers />
   </component>
@@ -101,24 +117,24 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
     </option>
   </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/servlets/AuthorizationServlet.java</url>
-          <line>22</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/servlets/RegistrationServlet.java</url>
-          <line>25</line>
-          <option name="timeStamp" value="5" />
+          <url>file://$PROJECT_DIR$/src/main/java/servlets/InputServlet.java</url>
+          <line>32</line>
+          <option name="timeStamp" value="10" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
