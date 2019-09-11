@@ -45,22 +45,28 @@ public class AfterLoggingServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        String sessionId = req.getSession().getId();
-
-        if(accountService.getUserBySession(sessionId) == null) {
-            resp.setContentType("text/html;charset=utf-8");
-            resp.setStatus(HttpServletResponse.SC_BAD_REQUEST);
+        String arg = req.getParameter("");
+        if(arg == null) {
             return;
         }
-        accountService.deleteSession(sessionId);
-        BufferedReader reader = new BufferedReader(new FileReader("pages_html" + File.separator + "out.html"));
-        StringBuilder sb = new StringBuilder();
-        while(reader.ready()) {
-            sb.append(reader.readLine());
+        if(arg.equals("DELETE")) {
+            String sessionId = req.getSession().getId();
+
+            if (accountService.getUserBySession(sessionId) == null) {
+                resp.setContentType("text/html;charset=utf-8");
+                resp.setStatus(HttpServletResponse.SC_BAD_REQUEST);
+                return;
+            }
+            accountService.deleteSession(sessionId);
+            BufferedReader reader = new BufferedReader(new FileReader("pages_html" + File.separator + "out.html"));
+            StringBuilder sb = new StringBuilder();
+            while (reader.ready()) {
+                sb.append(reader.readLine());
+            }
+
+            reader.close();
+            resp.getWriter().println(sb);
         }
 
-        reader.close();
-        resp.getWriter().println(sb);
     }
-
 }

@@ -41,17 +41,7 @@ public class InputServlet extends HttpServlet {
 
         accountService.addSession(req.getSession().getId(), accountService.getUserByLogin(login));
 
-        BufferedReader reader = new BufferedReader(new FileReader("pages_html" + File.separator + "input.html"));
-        StringBuilder sb = new StringBuilder();
-        sb.append(reader.readLine());
-        sb.append("Press the button to enter");
-        while(reader.ready()) {
-            sb.append(reader.readLine());
-        }
-
-        reader.close();
-
-        resp.getWriter().println(sb);
+        resp.getWriter().println("<html> <body bgcolor=\"#deb887\" text=\"black\"> <meta http-equiv=\"Refresh\" content=\"0; URL=http://localhost:8080/afterLogging\"> </body> </html>");
 
     }
 
