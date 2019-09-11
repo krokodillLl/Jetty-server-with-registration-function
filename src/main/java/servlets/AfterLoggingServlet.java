@@ -1,7 +1,6 @@
 package servlets;
 
 import accounts.AccountService;
-
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -22,12 +21,14 @@ public class AfterLoggingServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
+
         String sessionId = req.getSession().getId();
         if(!accountService.isNotEmptySessionIdToProfile() || accountService.getUserBySession(sessionId) == null) {
             resp.setContentType("text/html;charset=utf-8");
             resp.setStatus(HttpServletResponse.SC_BAD_REQUEST);
-            resp.getWriter().println("sign in to your account first");
-            resp.getWriter().println("<meta http-equiv=\"Refresh\" content=\"3; URL=http://localhost:8080/authorisation\">");
+            resp.getWriter().println("Sign in to your account first");
+            resp.getWriter().println("<html> <body bgcolor=\"#deb887\" text=\"black\"> <meta http-equiv=\"Refresh\" content=\"3; " +
+                    "URL=http://localhost:8080/autharisation\"> </body> </html>");
             return;
         }
 
@@ -55,6 +56,8 @@ public class AfterLoggingServlet extends HttpServlet {
             if (accountService.getUserBySession(sessionId) == null) {
                 resp.setContentType("text/html;charset=utf-8");
                 resp.setStatus(HttpServletResponse.SC_BAD_REQUEST);
+                resp.getWriter().println("<html> <body bgcolor=\"#deb887\" text=\"black\"> <meta http-equiv=\"Refresh\" content=\"0; " +
+                        "URL=http://localhost:8080/\"> </body> </html>");
                 return;
             }
             accountService.deleteSession(sessionId);
