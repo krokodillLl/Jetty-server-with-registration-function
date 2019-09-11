@@ -5,6 +5,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages_html/afterLogging.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages_html/afterLogging.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages_html/input.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server.jar" beforeDir="false" afterPath="$PROJECT_DIR$/server.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/servlets/AfterLoggingServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlets/AfterLoggingServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/servlets/InputServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlets/InputServlet.java" afterDir="false" />
     </list>
@@ -99,7 +100,7 @@
       <workItem from="1568043648757" duration="10465000" />
       <workItem from="1568054779502" duration="579000" />
       <workItem from="1568055445121" duration="471000" />
-      <workItem from="1568222879341" duration="2325000" />
+      <workItem from="1568222879341" duration="2600000" />
     </task>
     <servers />
   </component>
